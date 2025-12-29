@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     subgraph Internet["インターネット (外部ネットワーク)"]
         User["ユーザー (ブラウザ)"]
@@ -22,14 +23,7 @@ graph TD
             APIServer --- APISG
         end
 
-        %% 通信の案内
         PublicRT --- PublicSubnet
-        
-        %% 内部通信
         WebServer -- "VPC内部通信 (L3/L4)" --> APIServer
     end
-
-    %% 注釈
-    style VPC fill:#f9f,stroke:#333,stroke-width:2px
-    style PublicSubnet fill:#e1f5fe,stroke:#01579b
-    style PrivateSubnet fill:#fff9c4,stroke:#fbc02d
+```
